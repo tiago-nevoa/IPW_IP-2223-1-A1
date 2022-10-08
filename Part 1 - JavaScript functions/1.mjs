@@ -15,23 +15,23 @@ Do not create any unnecessary functions e.g. helpers.
 
 "use strict"
 
-function validateProperty(obj, propValidator) {
+export function validateProperty(obj, propValidator) {
 
 	// we read the obj value with the name give on validator
 	let arg_value = obj[propValidator.name]
-	console.log(arg_value)
+	// console.log(arg_value)
 
 	// funtions validators we need check
 	let arg_funs = propValidator.validators
-	console.log(arg_funs)
+	// console.log(arg_funs)
 
 	// if we have incorrect or empty argument value finish validation
-	console.log(arg_value === undefined)
+	// console.log(arg_value === undefined)
 	if (arg_value === undefined) return false
 
 	// For each property we validate the obj value
 	for (let n in arg_funs){
-		console.log(arg_funs[n](arg_value))
+		// console.log(arg_funs[n](arg_value))
 		if (!arg_funs[n](arg_value)) return false
 	}
 
@@ -40,6 +40,7 @@ function validateProperty(obj, propValidator) {
 }
 
 // Test Section
+/*
 const validator = {name : "p1" , validators: [s => typeof s == 'string' && s.length > 2, s => s[0]=="a"]  }
 const validator2 = {}
 
@@ -50,16 +51,17 @@ const obj4 = {}
 
 
 console.log("Validation_1:")
-console.log(validateProperty(obj1, validator) + " <---") //true
+console.log(validateProperty(obj1, validator) + " <--- ex_1 = true") //true
 
 console.log("Validation_2:")
-console.log(validateProperty(obj2, validator) + " <---") //false
+console.log(validateProperty(obj2, validator) + " <--- ex_1 = false") //false
 
 console.log("Validation_3:")
-console.log(validateProperty(obj3, validator) + " <---") //false
+console.log(validateProperty(obj3, validator) + " <--- ex_1 = false") //false
 
 console.log("Validation_4:")
-console.log(validateProperty(obj3, validator2) + " <---") //false
+console.log(validateProperty(obj3, validator2) + " <--- ex_1 = false") //false
 
 console.log("Validation_5:")
-console.log(validateProperty(obj4, validator) + " <---") //false
+console.log(validateProperty(obj4, validator) + " <--- ex_1 = false") //false
+*/
