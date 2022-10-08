@@ -17,25 +17,7 @@ The function must call validateProperty for each validator
 
 "use strict"
 
-function filter(a, predicate) {
-    let ret = []
-    for (let index = 0; index < array.length; index++) {
-        if(predicate(a[index])) {
-            ret.push(a[index])
-        }
-    }
-    return ret
-}
-
-function map(a, prejection) {
-    let ret = []
-    for (let index = 0; index < array.length; index++) {
-        ret.push(prejection(a[index]))
-    }
-    return ret
-
-}
-
+// como chamar a fun a partir de outro ficheiro ???
 function validateProperty(obj, propValidator) {
 	let arg_value = obj[propValidator.name]
 	console.log(arg_value)
@@ -52,29 +34,21 @@ function validateProperty(obj, propValidator) {
 
 function validateProperties(obj, propValidators){
 
+	// creat empty array
 	let ret = []
 
+	/* 	call function validateProperty for each validator,
+	 	if return false (fail property validation)
+		push on the array the name of the propertie
+	*/
 	if (!validateProperty(obj, propValidators[0])) ret.push(propValidators[0].name)
 	if (!validateProperty(obj, propValidators[1])) ret.push(propValidators[1].name)
-	return ret
 
-	//console.log(validateProperty(obj, propValidators[0]) + " <---")
-	// we read the obj value with the name give on validator
 	// console.log(propValidators[0])
+	//console.log(validateProperty(obj, propValidators[0]) + " <---")
 	// console.log(propValidators[1].name)
 
-	// let arg_value0 = obj[propValidators[0].name]
-	// console.log(arg_value0)
-
-	// let arg_value1 = obj[propValidators[1].name]
-	// console.log(arg_value1)
-
-	// let arg_funs0 = propValidators[0].validators
-	// console.log(arg_funs0)
-
-	// let arg_funs1 = propValidators[1].validators
-	// console.log(arg_funs1)
-
+	return ret
 }
 
 // Test Section
