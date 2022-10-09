@@ -29,8 +29,11 @@ let numbers = ["one", "two", "three", "four"]
 let numbers1 = ["1", "2", "3", "4", "5"]
 let numbers2 = ["Grande", "Invicto", "Poderoso"]
 
-console.log(numbers.associateWith(str => str.length))
-console.log(numbers1.associateWith( str => parseInt(str, 10)))
-console.log(numbers2.associateWith( str => str + " SLB"))
+console.log("Validation_1:")
+console.log(numbers.associateWith(str => str.length), " <--- ex_4")
+console.log("Validation_2:")
+console.log(numbers1.associateWith( str => parseInt(str, 10)), " <--- ex_4")
+console.log("Validation_3:")
+console.log(numbers2.associateWith( str => str + " SLB"), " <--- ex_4")
 
 // { one: 3, two: 3, three: 5, four: 4}
