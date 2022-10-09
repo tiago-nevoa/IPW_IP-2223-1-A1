@@ -22,7 +22,8 @@ export function validateProperties(obj, propValidators){
 
 	// console.log(propValidators)
 	// filter the array with elements whose validation failed
-	const ret = propValidators.filter( propValidators => {
+	// Object.values() method to get an array of the object's values and call the filter() method on the array of values.
+	const ret = Object.values(propValidators).filter( propValidators => {
 		return !validateProperty(obj, propValidators)
 	})
 	// console.log(ret)
@@ -36,7 +37,7 @@ export function validateProperties(obj, propValidators){
 }
 
 // Test Section
-/*
+
 const validators = [
 	{
 	name : "p1" ,
@@ -58,4 +59,4 @@ console.log(validateProperties(obj2, validators) + " <--- ex_2 = [p1, p2]") // [
 console.log("Validation_3:")
 console.log(validateProperties(obj3, validators) + " <--- ex_2 = []") // []
 
-*/
+

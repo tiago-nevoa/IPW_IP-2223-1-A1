@@ -40,7 +40,7 @@ export function validateProperty(obj, propValidator) {
 }
 
 // Test Section
-/*
+
 const validator = {name : "p1" , validators: [s => typeof s == 'string' && s.length > 2, s => s[0]=="a"]  }
 const validator2 = {}
 
@@ -64,4 +64,4 @@ console.log(validateProperty(obj3, validator2) + " <--- ex_1 = false") //false
 
 console.log("Validation_5:")
 console.log(validateProperty(obj4, validator) + " <--- ex_1 = false") //false
-*/
+

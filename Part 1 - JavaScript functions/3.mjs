@@ -26,9 +26,9 @@ const obj1 = { p1 : "a" }
 const obj2 = { p1 : 123  }
 const obj3 = { p1 : "abc" , p2 : 123 }
 
-// console.log("Validation_1:")
-// console.log(obj1.validateProperties(validators) + " <--- ex_3 = [p1, p2]") // ["p1", "p2"]
-// console.log("Validation_2:")
-// console.log(obj2.validateProperties(validators) + " <--- ex_3 = [p1, p2]") // ["p1", "p2"]
+console.log("Validation_1:")
+console.log(obj1.validateProperties(validators) + " <--- ex_3 = [p1, p2]") // ["p1", "p2"]
+console.log("Validation_2:")
+console.log(obj2.validateProperties(validators) + " <--- ex_3 = [p1, p2]") // ["p1", "p2"]
 console.log("Validation_3:")
 console.log(obj3.validateProperties(validators) + " <--- ex_3 = []") // []
